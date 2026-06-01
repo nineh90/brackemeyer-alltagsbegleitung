@@ -138,6 +138,14 @@
         display: flex;
     }
 
+    /* Logo auf Desktop größer */
+    .site-logo-bild {
+        height: 92px;
+    }
+    .site-header.ist-gescrollt .site-logo-bild {
+        height: 62px;
+    }
+
     /* Vertrauen: Bild + Text nebeneinander */
     .vertrauen-inner {
         flex-direction: row;

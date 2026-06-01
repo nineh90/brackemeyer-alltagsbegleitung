@@ -44,10 +44,15 @@ $aktuelle_seite = basename($_SERVER['PHP_SELF']);
 <header class="site-header">
     <div class="container header-inner">
 
-        <!-- Logo / Markenname -->
+        <!-- Logo -->
         <a href="/index.php" class="site-logo" aria-label="Andrea Brackemeyer – Startseite">
-            <span class="logo-name">Andrea Brackemeyer</span>
-            <span class="logo-tagline">Alltagsbegleitung</span>
+            <img
+                src="/images/logo/brackemeyer_alltagsbegleitung_logo.png"
+                alt="Andrea Brackemeyer – Alltagsbegleitung"
+                class="site-logo-bild"
+                width="220"
+                height="60"
+            >
         </a>
 
         <!-- Telefonnummer prominent im Header (wichtig für Senioren!) -->

@@ -60,14 +60,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // ===== HEADER: SCHATTEN BEI SCROLLEN =====
-    // Leichten Schatten hinzufügen wenn nicht ganz oben
+    // ===== HEADER: SCHATTEN + LOGO-VERKLEINERUNG BEIM SCROLLEN =====
     const header = document.querySelector('.site-header');
     if (header) {
         window.addEventListener('scroll', function () {
-            if (window.scrollY > 10) {
+            if (window.scrollY > 40) {
+                header.classList.add('ist-gescrollt');
                 header.style.boxShadow = '0 3px 15px rgba(0, 0, 0, 0.18)';
             } else {
+                header.classList.remove('ist-gescrollt');
                 header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.12)';
             }
         }, { passive: true });
