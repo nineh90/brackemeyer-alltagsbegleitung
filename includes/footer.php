@@ -1,0 +1,75 @@
+<?php
+/**
+ * Footer-Include – wird auf allen Seiten eingebunden
+ * Enthält: Kontaktinfos, Navigation, Copyright, JS-Einbindung
+ */
+?>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    <div class="container footer-inner">
+
+        <!-- Footer-Spalte 1: Über mich Kurzversion -->
+        <div class="footer-spalte">
+            <h3 class="footer-ueberschrift">Andrea Brackemeyer</h3>
+            <p class="footer-tagline">Alltag mit Herz</p>
+            <p>Ich nehme mir Zeit für Sie –<br>mit Herz, Respekt und Verlässlichkeit.</p>
+            <p class="footer-kernwerte">
+                <strong>ZEIT. NÄHE. UNTERSTÜTZUNG.</strong>
+            </p>
+        </div>
+
+        <!-- Footer-Spalte 2: Schnellnavigation -->
+        <div class="footer-spalte">
+            <h3 class="footer-ueberschrift">Navigation</h3>
+            <ul class="footer-nav">
+                <li><a href="/index.php">Startseite</a></li>
+                <li><a href="/pages/about.php">Über mich</a></li>
+                <li><a href="/pages/leistungen.php">Leistungen</a></li>
+                <li><a href="/pages/abrechnung.php">Abrechnung & Kosten</a></li>
+                <li><a href="/pages/kontakt.php">Kontakt</a></li>
+            </ul>
+        </div>
+
+        <!-- Footer-Spalte 3: Kontakt -->
+        <div class="footer-spalte">
+            <h3 class="footer-ueberschrift">Kontakt</h3>
+            <address class="footer-kontakt">
+                <p>
+                    <a href="tel:015161657136" class="footer-telefon">
+                        0151 61 65 71 36
+                    </a>
+                </p>
+                <p>
+                    <a href="/pages/kontakt.php" class="btn btn-outline btn-klein">
+                        Nachricht schreiben
+                    </a>
+                </p>
+            </address>
+        </div>
+
+    </div>
+
+    <!-- Unterer Footer-Streifen -->
+    <div class="footer-unten">
+        <div class="container footer-unten-inner">
+            <p class="copyright">
+                &copy; <?php echo date('Y'); ?> Andrea Brackemeyer – Alltagsbegleitung. Alle Rechte vorbehalten.
+            </p>
+            <nav class="footer-rechtliches" aria-label="Rechtliche Links">
+                <a href="/pages/impressum.php">Impressum</a>
+                <a href="/pages/datenschutz.php">Datenschutz</a>
+            </nav>
+            <p class="footer-credit">
+                Webdesign by <a href="https://www.nils-digital.de" target="_blank" rel="noopener">Nils-Digital</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- ===== ENDE FOOTER ===== -->
+
+<!-- JavaScript einbinden (am Ende für schnelleres Laden) -->
+<script src="/js/main.js"></script>
+
+</body>
+</html>
