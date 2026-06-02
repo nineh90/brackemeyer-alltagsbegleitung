@@ -391,6 +391,36 @@ h3 { font-size: var(--schrift-groesse-h3); }
 }
 
 /* Abdunkeln des Hero-Bilds für Lesbarkeit des Textes */
+/* Dekoratives Herz – nur Desktop */
+.hero-herz-deko {
+    display: none;
+    position: absolute;
+    right: 18%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 280px;
+    pointer-events: none;
+    z-index: 2;
+}
+.hero-herz-pfad {
+    fill: none;
+    stroke: rgba(251, 185, 145, 0.45);
+    stroke-width: 4.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: herz-zeichnen 2.2s ease-out 0.5s forwards;
+}
+@keyframes herz-zeichnen {
+    from { stroke-dashoffset: 900; }
+    to   { stroke-dashoffset: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-herz-pfad { animation: none; stroke-dashoffset: 0; }
+}
+
 .hero-overlay {
     position: absolute;
     inset: 0;

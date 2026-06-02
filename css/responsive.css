@@ -96,6 +96,11 @@
 /* ===== DESKTOP: ab 900px ===== */
 @media (min-width: 900px) {
 
+    /* Dekoratives Herz in der Hero einblenden */
+    .hero-herz-deko {
+        display: block;
+    }
+
     :root {
         --rand-container: 2.5rem;
         --schrift-groesse-h1: 2.8rem;

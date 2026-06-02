@@ -56,6 +56,14 @@ include 'includes/header.php';
                 </p>
             </div>
         </div>
+
+        <!-- Dekoratives Herz – nur Desktop, zeichnet sich beim Laden -->
+        <div class="hero-herz-deko" aria-hidden="true">
+            <svg viewBox="0 0 200 185" xmlns="http://www.w3.org/2000/svg">
+                <path class="hero-herz-pfad" d="M100,170 C55,138 8,105 8,62 C8,28 30,8 58,8 C74,8 88,18 100,34 C112,18 126,8 142,8 C170,8 192,28 192,62 C192,105 145,138 100,170 Z"/>
+            </svg>
+        </div>
+
     </section>
     <!-- ===== ENDE HERO ===== -->
 
