@@ -2,10 +2,10 @@
  * main.js – Hauptskript
  * Projekt: Andrea Brackemeyer – Alltagsbegleitung
  *
- * Enthält: Navigation (Hamburger), sanftes Scrollen, keine unnötigen Effekte
+ * Enthält: Navigation (Hamburger), sanftes Scrollen, Header-Scroll-Effekt,
+ *          dezente Scroll-Animationen via IntersectionObserver
  */
 
-// Warten bis das DOM vollständig geladen ist
 document.addEventListener('DOMContentLoaded', function () {
 
     // ===== HAMBURGER-NAVIGATION =====
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // ===== SANFTES SCROLLEN ZU ANKER-LINKS =====
-    // Für interne Anker-Links (z.B. /pages/leistungen.php#gesellschaft)
     document.querySelectorAll('a[href^="#"]').forEach(function (link) {
         link.addEventListener('click', function (ereignis) {
             const zielId = this.getAttribute('href').substring(1);
@@ -60,18 +59,88 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // ===== HEADER: SCHATTEN + LOGO-VERKLEINERUNG BEIM SCROLLEN =====
+    // ===== HEADER: KLASSE BEIM SCROLLEN =====
+    // Hysterese-Schwellwerte verhindern schnelles Hin-und-Her-Schalten (Springen)
+    // Das Logo benutzt transform statt height – kein Layout-Reflow, kein Springen
     const header = document.querySelector('.site-header');
     if (header) {
+        const SCROLL_EIN = 50;   // Klasse hinzufügen wenn > 50px gescrollt
+        const SCROLL_AUS = 25;   // Klasse entfernen wenn < 25px gescrollt
+
         window.addEventListener('scroll', function () {
-            if (window.scrollY > 40) {
+            const pos = window.scrollY;
+            const istGescrollt = header.classList.contains('ist-gescrollt');
+
+            if (!istGescrollt && pos > SCROLL_EIN) {
                 header.classList.add('ist-gescrollt');
-                header.style.boxShadow = '0 3px 15px rgba(0, 0, 0, 0.18)';
-            } else {
+            } else if (istGescrollt && pos < SCROLL_AUS) {
                 header.classList.remove('ist-gescrollt');
-                header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.12)';
             }
         }, { passive: true });
+    }
+
+
+    // ===== SCROLL-ANIMATIONEN (dezentes Fade-In beim Scrollen) =====
+    const bewegungReduziert = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if ('IntersectionObserver' in window && !bewegungReduziert) {
+
+        // Elemente, die beim Scrollen eingeblendet werden sollen
+        const selektoren = [
+            '.abschnitt-kopf',
+            '.kernwert',
+            '.leistungs-karte',
+            '.leistung-detail-inner',
+            '.vertrauen-bild-wrapper',
+            '.ansatz-karte',
+            '.weg-karte',
+            '.fakten-karte',
+            '.ablauf-schritt',
+            '.kontakt-karte',
+            '.kontakt-formular-wrapper',
+            '.about-bild-wrapper',
+            '.logo-sprueche-logo-wrapper',
+            '.sprueche-container'
+        ].join(', ');
+
+        const elemente = document.querySelectorAll(selektoren);
+
+        // Nur Elemente unterhalb des initialen Sichtbereichs animieren –
+        // bereits sichtbare Elemente beim Laden nicht verstecken
+        elemente.forEach(function (el) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top >= window.innerHeight - 60) {
+                el.classList.add('scroll-rein');
+            }
+        });
+
+        // Gestaffelte Verzögerung für Karten innerhalb von Raster-Gruppen
+        const rasterGruppen = document.querySelectorAll(
+            '.karten-raster, .ansatz-karten, .wege-raster, .fakten-liste, .ablauf-schritte, .kernwerte-inner'
+        );
+        rasterGruppen.forEach(function (gruppe) {
+            gruppe.querySelectorAll('.scroll-rein').forEach(function (kind, i) {
+                kind.style.transitionDelay = (i * 0.1) + 's';
+            });
+        });
+
+        // IntersectionObserver: Klasse hinzufügen sobald Element sichtbar wird
+        const beobachter = new IntersectionObserver(function (eintraege) {
+            eintraege.forEach(function (eintrag) {
+                if (eintrag.isIntersecting) {
+                    eintrag.target.classList.add('scroll-sichtbar');
+                    beobachter.unobserve(eintrag.target); // Einmal animieren genügt
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -30px 0px'
+        });
+
+        // Nur vorbereitete Elemente beobachten
+        document.querySelectorAll('.scroll-rein').forEach(function (el) {
+            beobachter.observe(el);
+        });
     }
 
 });

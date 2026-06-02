@@ -244,11 +244,15 @@ h3 { font-size: var(--schrift-groesse-h3); }
     height: 72px;
     width: auto;
     display: block;
-    transition: height 0.3s ease, filter 0.3s ease;
+    /* transform statt height – kein Layout-Reflow, kein Navbar-Springen */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    transform-origin: left center;
+    transform: scale(1);
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.10));
+    will-change: transform;
 }
 .site-header.ist-gescrollt .site-logo-bild {
-    height: 52px;
+    transform: scale(0.72);   /* entspricht ~52px optisch */
     filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.08));
 }
 
@@ -1419,6 +1423,30 @@ h3 { font-size: var(--schrift-groesse-h3); }
     }
     .spruch--1 {
         opacity: 1;
+    }
+}
+
+
+/* ===== SCROLL-ANIMATIONEN (Intersection Observer) ===== */
+/* Basis-Zustand: unsichtbar + leicht nach unten versetzt */
+.scroll-rein {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+/* Sichtbar-Zustand: eingeblendet, in Position */
+.scroll-rein.scroll-sichtbar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animationsfreie Umgebung – Barrierefreiheit */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-rein,
+    .scroll-rein.scroll-sichtbar {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }
 
