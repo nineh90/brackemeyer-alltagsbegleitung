@@ -415,6 +415,16 @@ h3 { font-size: var(--schrift-groesse-h3); }
     color: rgba(255,255,255,0.9);
     margin-bottom: var(--abstand-xs);
     text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.hero-vortitel--sichtbar {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-vortitel { opacity: 1; transform: none; transition: none; }
 }
 
 .hero-titel {
@@ -457,6 +467,13 @@ h3 { font-size: var(--schrift-groesse-h3); }
     margin-left: 5px;
     animation: herz-erscheinen 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
                herz-schlag 2s ease-in-out 0.4s infinite;
+}
+
+/* Hero-Startseite: Herz groß – ersetzt das Wort "Herz" visuell */
+.hero-titel .tipp-cursor--fertig {
+    font-size: 1.7em;
+    margin-left: 10px;
+    vertical-align: -0.08em;
 }
 
 .seiten-hero-titel .tipp-cursor--fertig {
@@ -515,34 +532,52 @@ h3 { font-size: var(--schrift-groesse-h3); }
 /* ===== KERNWERTE-STREIFEN ===== */
 .kernwerte-streifen {
     background-color: var(--farbe-primaer);
-    color: var(--farbe-weiss);
     padding: var(--abstand-l) 0;
+    overflow: hidden;
 }
 
 .kernwerte-inner {
     display: flex;
     flex-direction: column;
-    gap: var(--abstand-l);
+    align-items: center;
+    gap: var(--abstand-s);
     text-align: center;
 }
 
-.kernwert-icon {
-    font-size: 2.2rem;
-    display: block;
-    margin-bottom: var(--abstand-xs);
+/* Card-Stil */
+.kernwert {
+    background-color: var(--farbe-weiss);
+    border-radius: var(--radius-mittel);
+    padding: var(--abstand-m) var(--abstand-l);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.13);
+    width: 100%;
+    max-width: 320px;
+    transition: transform var(--uebergang), box-shadow var(--uebergang);
 }
+.kernwert:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Icon-Kreis */
+.kernwert-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--farbe-akzent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--abstand-xs);
+    color: var(--farbe-primaer);
+}
+
 .kernwert-titel {
     font-family: var(--schrift-ueberschrift);
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     letter-spacing: 0.05em;
-    margin-bottom: var(--abstand-xs);
-    color: var(--farbe-weiss);
-}
-.kernwert p {
-    font-size: 0.98rem;
-    color: rgba(255,255,255,0.88);
-    max-width: 260px;
-    margin: 0 auto;
+    margin-bottom: 0;
+    color: var(--farbe-primaer-dunkel);
 }
 
 

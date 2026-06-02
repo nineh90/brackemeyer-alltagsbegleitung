@@ -9,8 +9,11 @@
 
 // ===== SCHREIBMASCHINEN-EFFEKT =====
 // Generisch: element = H1-Knoten, segmente = [{text, klass}], verzoegerung in ms
-function titelTippen(element, segmente, verzoegerung) {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+function titelTippen(element, segmente, verzoegerung, onFertig) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (onFertig) onFertig();
+        return;
+    }
 
     element.innerHTML = '';
     const cursor = document.createElement('span');
@@ -26,6 +29,7 @@ function titelTippen(element, segmente, verzoegerung) {
             setTimeout(function () {
                 cursor.textContent = '♥';
                 cursor.classList.add('tipp-cursor--fertig');
+                if (onFertig) onFertig();
             }, 350);
             return;
         }
@@ -68,8 +72,16 @@ const heroTitel = document.querySelector('.hero-titel');
 if (heroTitel) {
     titelTippen(heroTitel, [
         { text: 'Andrea – ', klass: null },
-        { text: 'Alltag mit Herz', klass: 'akzent' }
-    ], 750);
+        { text: 'Alltag mit', klass: 'akzent' }
+    ], 750, function () {
+        // Vortitel einblenden sobald das Herz steht (Herz-Animation: 0.4s)
+        var vortitel = document.querySelector('.hero-vortitel');
+        if (vortitel) {
+            setTimeout(function () {
+                vortitel.classList.add('hero-vortitel--sichtbar');
+            }, 500); // leicht nach dem Herz-Pop
+        }
+    });
 }
 
 // Unterseiten: Text direkt aus dem Element lesen, kürzere Verzögerung

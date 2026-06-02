@@ -28,11 +28,12 @@
     .kernwerte-inner {
         flex-direction: row;
         justify-content: center;
-        gap: var(--abstand-l);
+        align-items: stretch;
+        gap: var(--abstand-m);
     }
     .kernwert {
         flex: 1;
-        max-width: 220px;
+        max-width: 260px;
     }
 
     /* Hero-Buttons nebeneinander */
