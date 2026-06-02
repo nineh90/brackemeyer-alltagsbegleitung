@@ -147,6 +147,11 @@ include 'includes/header.php';
     <!-- ===== ENDE LEISTUNGSÜBERSICHT ===== -->
 
 
+    <!-- ===== LOGO & SPRÜCHE ===== -->
+    <?php include 'includes/logo_sprueche.php'; ?>
+    <!-- ===== ENDE LOGO & SPRÜCHE ===== -->
+
+
     <!-- ===== VERTRAUENSBEREICH ===== -->
     <!-- Erfahrung und Qualifikationen – wichtig für Vertrauensaufbau -->
     <section class="vertrauen" aria-labelledby="vertrauen-ueberschrift">

@@ -224,4 +224,6 @@ include '../includes/header.php';
 
 </main>
 
+<?php include '../includes/logo_sprueche.php'; ?>
+
 <?php include '../includes/footer.php'; ?>

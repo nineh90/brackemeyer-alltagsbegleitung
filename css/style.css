@@ -1135,18 +1135,34 @@ h3 { font-size: var(--schrift-groesse-h3); }
     background-color: var(--farbe-akzent);
     margin-bottom: var(--abstand-s);
 }
-.kontakt-karte--hervorgehoben {
+/* Doppel-Klasse erhöht Spezifität auf (0,2,x) und gewinnt sicher gegen .kontakt-karte h3/p (0,1,x) */
+.kontakt-karte.kontakt-karte--hervorgehoben {
     background-color: var(--farbe-primaer);
     color: var(--farbe-weiss);
 }
-.kontakt-karte--hervorgehoben h3,
-.kontakt-karte--hervorgehoben p {
+.kontakt-karte.kontakt-karte--hervorgehoben h3,
+.kontakt-karte.kontakt-karte--hervorgehoben p {
     color: var(--farbe-weiss);
 }
+/* Hinweistext etwas zurückgenommen – bleibt aber klar lesbar */
+.kontakt-karte.kontakt-karte--hervorgehoben p.kontakt-hinweis {
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 0.85rem;
+}
+/* Telefon-Link: Lachs – konsistent mit Hero und Footer auf dunklem Hintergrund */
+.kontakt-karte.kontakt-karte--hervorgehoben .kontakt-telefon-link {
+    color: #FBB991;
+}
+.kontakt-karte.kontakt-karte--hervorgehoben .kontakt-telefon-link:hover {
+    color: var(--farbe-weiss);
+    text-decoration: underline;
+}
+
 .kontakt-karte-icon {
     font-size: 1.8rem;
     flex-shrink: 0;
 }
+/* Basis-Karte (heller Hintergrund) */
 .kontakt-karte h3 {
     color: var(--farbe-primaer-dunkel);
     margin-bottom: 0.3rem;
@@ -1157,6 +1173,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
     color: var(--farbe-text-hell);
     line-height: 1.55;
 }
+/* Telefon-Link auf hellem Hintergrund (falls außerhalb der hervorgehobenen Karte verwendet) */
 .kontakt-telefon-link {
     display: block;
     font-size: 1.4rem;
@@ -1166,12 +1183,8 @@ h3 { font-size: var(--schrift-groesse-h3); }
     margin: 0.4rem 0;
 }
 .kontakt-telefon-link:hover {
+    color: var(--farbe-primaer-dunkel);
     text-decoration: underline;
-    color: var(--farbe-weiss);
-}
-.kontakt-hinweis {
-    font-size: 0.85rem !important;
-    color: rgba(255,255,255,0.75) !important;
 }
 .kontakt-datenschutz-hinweis {
     font-size: 0.88rem;
@@ -1277,6 +1290,136 @@ h3 { font-size: var(--schrift-groesse-h3); }
     margin-bottom: var(--abstand-m);
     font-size: 1rem;
     line-height: 1.6;
+}
+
+
+/* ===== LOGO & SPRÜCHE-SEKTION ===== */
+.logo-sprueche {
+    background: linear-gradient(160deg, var(--farbe-akzent) 0%, var(--farbe-weiss) 100%);
+    padding: var(--abstand-xl) 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.logo-sprueche-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--abstand-m);
+}
+
+/* Logo */
+.logo-sprueche-logo-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.logo-sprueche-logo {
+    max-width: 280px;
+    height: auto;
+    filter: drop-shadow(0 3px 10px rgba(122, 75, 40, 0.18));
+    animation: logo-puls 3s ease-in-out infinite;
+    transform-origin: center;
+}
+/* Beim Hovern hält das Pulsieren inne – ruhiger Moment */
+.logo-sprueche-logo:hover {
+    animation-play-state: paused;
+}
+
+@keyframes logo-puls {
+    0%, 100% { transform: scale(1);    }
+    50%       { transform: scale(1.03); }
+}
+
+/* Dekorativer Trennstrich mit Verzierung */
+.logo-sprueche-trenner {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--farbe-primaer), transparent);
+    border-radius: 2px;
+    margin: var(--abstand-xs) auto;
+}
+
+/* Sprüche-Container */
+.sprueche-container {
+    position: relative;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: var(--abstand-m) var(--abstand-s);
+}
+
+/* Großes dekoratives Anführungszeichen */
+.sprueche-dekor {
+    display: block;
+    font-family: var(--schrift-ueberschrift);
+    font-size: 6rem;
+    line-height: 0.6;
+    color: var(--farbe-primaer);
+    opacity: 0.18;
+    margin-bottom: var(--abstand-xs);
+    user-select: none;
+}
+
+/* Stapel: CSS-Grid – alle Sprüche in derselben Zelle übereinander.
+   Höhe passt sich automatisch dem längsten Spruch an (auch opacity:0-Elemente beeinflussen das Layout). */
+.sprueche-stapel {
+    display: grid;
+}
+
+/* Einzelner Spruch – alle in derselben Grid-Zelle, per Animation sichtbar */
+.spruch {
+    grid-area: 1 / 1;   /* alle Sprüche übereinander, gleiche Zelle */
+    font-family: var(--schrift-ueberschrift);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--farbe-text);
+    line-height: 1.65;
+    opacity: 0;
+    animation: spruch-wechsel 35s infinite;
+}
+.spruch em {
+    color: var(--farbe-primaer);
+    font-style: italic;
+}
+
+/* Verzögerungen: 5 Sprüche × 7 Sekunden = 35 Sekunden Gesamtzyklus */
+.spruch--1 { animation-delay: 0s;   }
+.spruch--2 { animation-delay: 7s;   }
+.spruch--3 { animation-delay: 14s;  }
+.spruch--4 { animation-delay: 21s;  }
+.spruch--5 { animation-delay: 28s;  }
+
+/* Keyframes: ~1 s Einblenden (3 %), ~5 s sichtbar (bis 17 %), ~1 s Ausblenden (bis 20 %) */
+@keyframes spruch-wechsel {
+    0%       { opacity: 0; transform: translateY(8px);  }
+    3%       { opacity: 1; transform: translateY(0);    }
+    17%      { opacity: 1; transform: translateY(0);    }
+    20%      { opacity: 0; transform: translateY(-8px); }
+    100%     { opacity: 0; transform: translateY(0);    }
+}
+
+/* Autorenzeile */
+.sprueche-attribution {
+    display: block;
+    margin-top: var(--abstand-s);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--farbe-primaer);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Barrierefreiheit: Animation reduzieren wenn vom System gewünscht */
+@media (prefers-reduced-motion: reduce) {
+    .logo-sprueche-logo {
+        animation: none;
+    }
+    .spruch {
+        animation: none;
+        opacity: 0;
+    }
+    .spruch--1 {
+        opacity: 1;
+    }
 }
 
 
