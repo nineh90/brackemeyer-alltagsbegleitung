@@ -3,8 +3,82 @@
  * Projekt: Andrea Brackemeyer – Alltagsbegleitung
  *
  * Enthält: Navigation (Hamburger), sanftes Scrollen, Header-Scroll-Effekt,
- *          dezente Scroll-Animationen via IntersectionObserver
+ *          dezente Scroll-Animationen via IntersectionObserver,
+ *          Schreibmaschinen-Effekt für H1-Überschriften
  */
+
+// ===== SCHREIBMASCHINEN-EFFEKT =====
+// Generisch: element = H1-Knoten, segmente = [{text, klass}], verzoegerung in ms
+function titelTippen(element, segmente, verzoegerung) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    element.innerHTML = '';
+    const cursor = document.createElement('span');
+    cursor.className = 'tipp-cursor';
+    cursor.setAttribute('aria-hidden', 'true');
+    element.appendChild(cursor);
+
+    let segIdx = 0, charIdx = 0, aktuellSpan = null;
+
+    function tippe() {
+        if (segIdx >= segmente.length) {
+            // Kurze Pause, dann Cursor zum Herz verwandeln
+            setTimeout(function () {
+                cursor.textContent = '♥';
+                cursor.classList.add('tipp-cursor--fertig');
+            }, 350);
+            return;
+        }
+
+        const seg = segmente[segIdx];
+
+        if (charIdx === 0) {
+            if (seg.klass) {
+                aktuellSpan = document.createElement('span');
+                aktuellSpan.className = seg.klass;
+                element.insertBefore(aktuellSpan, cursor);
+            } else {
+                aktuellSpan = null;
+            }
+        }
+
+        const zeichen = seg.text[charIdx];
+        if (aktuellSpan) {
+            aktuellSpan.textContent += zeichen;
+        } else {
+            const vorher = cursor.previousSibling;
+            if (vorher && vorher.nodeType === Node.TEXT_NODE) {
+                vorher.textContent += zeichen;
+            } else {
+                element.insertBefore(document.createTextNode(zeichen), cursor);
+            }
+        }
+
+        charIdx++;
+        if (charIdx >= seg.text.length) { segIdx++; charIdx = 0; }
+
+        setTimeout(tippe, 72);
+    }
+
+    setTimeout(tippe, verzoegerung);
+}
+
+// Startseite: zwei Segmente (normaler Text + Akzent-Span), nach Bild-Animation starten
+const heroTitel = document.querySelector('.hero-titel');
+if (heroTitel) {
+    titelTippen(heroTitel, [
+        { text: 'Andrea – ', klass: null },
+        { text: 'Alltag mit Herz', klass: 'akzent' }
+    ], 750);
+}
+
+// Unterseiten: Text direkt aus dem Element lesen, kürzere Verzögerung
+const seitenTitel = document.querySelector('.seiten-hero-titel');
+if (seitenTitel) {
+    const text = seitenTitel.textContent.trim();
+    titelTippen(seitenTitel, [{ text: text, klass: null }], 300);
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
 

@@ -423,24 +423,60 @@ h3 { font-size: var(--schrift-groesse-h3); }
     line-height: 1.25;
     margin-bottom: var(--abstand-s);
     text-shadow: 0 2px 8px rgba(0,0,0,0.55);
-    animation: hero-titel-einblenden 0.9s ease-out 0.4s both;
 }
 
-@keyframes hero-titel-einblenden {
-    from {
-        opacity: 0;
-        transform: translateY(16px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Schreibmaschinen-Cursor hinter dem Titel */
+.tipp-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: #FBB991;
+    margin-left: 3px;
+    vertical-align: middle;
+    animation: cursor-blinken 0.75s step-end infinite;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .hero-titel {
-        animation: none;
-    }
+@keyframes cursor-blinken {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* Auf Unterseiten ist die H1 bereits lachsfarben – Cursor weiß */
+.seiten-hero-titel .tipp-cursor {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Fertig-Zustand: Cursor wird zum animierten Herz */
+.tipp-cursor--fertig {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    color: #FBB991;
+    font-size: 0.85em;
+    line-height: 1;
+    margin-left: 5px;
+    animation: herz-erscheinen 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+               herz-schlag 2s ease-in-out 0.4s infinite;
+}
+
+.seiten-hero-titel .tipp-cursor--fertig {
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    color: #FBB991;
+}
+
+@keyframes herz-erscheinen {
+    from { transform: scale(0); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+@keyframes herz-schlag {
+    0%, 100% { transform: scale(1);    }
+    15%      { transform: scale(1.45); }
+    30%      { transform: scale(1);    }
+    45%      { transform: scale(1.25); }
+    60%      { transform: scale(1);    }
 }
 .hero-titel .akzent {
     color: #FBB991; /* Lachs – Logo-Herzton, hebt sich auf dunklem Overlay ab */
