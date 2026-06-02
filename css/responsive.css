@@ -47,14 +47,22 @@
         justify-content: center;
     }
 
-    /* Footer: 2-spaltig */
+    /* Footer: 2-spaltig, Spalten wieder linksbündig */
     .footer-inner {
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
     }
     .footer-spalte {
         flex: 1;
         min-width: 180px;
+        text-align: left;
+    }
+    .footer-logo-link {
+        display: inline-block;
+    }
+    .footer-nav {
+        text-align: left;
     }
 }
 

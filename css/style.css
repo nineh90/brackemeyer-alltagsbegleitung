@@ -8,17 +8,18 @@
 
 /* ===== CSS-VARIABLEN (Design-System) ===== */
 :root {
-    /* Farben */
-    --farbe-primaer:      #4A7FA5;   /* Warmes Blau */
-    --farbe-primaer-hell: #6199BE;   /* Helleres Blau für Hover */
-    --farbe-primaer-dunkel: #3A6A8C; /* Dunkleres Blau für Kontrast */
-    --farbe-akzent:       #F5F0E8;   /* Sanftes Beige / Warmweiß */
-    --farbe-akzent-dunkel: #EAE3D5;  /* Etwas dunkleres Beige */
-    --farbe-text:         #2D2D2D;   /* Fast-Schwarz – gut lesbar */
-    --farbe-text-hell:    #5A5A5A;   /* Grau für Untertexte */
-    --farbe-weiss:        #FFFFFF;
-    --farbe-erfolg:       #4A8A5A;   /* Grün für Häkchen */
-    --farbe-schatten:     rgba(0, 0, 0, 0.12);
+    /* Farben – abgeleitet direkt aus dem Logo */
+    --farbe-primaer:        #7A4B28;   /* Logo-Braun (Andrea-Schrift) */
+    --farbe-primaer-hell:   #9E6438;   /* Hover / aktive Zustände */
+    --farbe-primaer-dunkel: #5A3318;   /* Kontrast / gedrückte Zustände */
+    --farbe-gruen:          #7E9150;   /* Salbeigrün (Logo-Blätter) – sparsam einsetzen */
+    --farbe-akzent:         #FBF6F0;   /* Warmes Creme (Logo-Hintergrund) */
+    --farbe-akzent-dunkel:  #EDE4D8;   /* Beige für Section-Hintergründe */
+    --farbe-text:           #2D2D2D;   /* Fast-Schwarz – gut lesbar */
+    --farbe-text-hell:      #5A5A5A;   /* Grau für Untertexte */
+    --farbe-weiss:          #FFFFFF;
+    --farbe-erfolg:         var(--farbe-gruen);
+    --farbe-schatten:       rgba(0, 0, 0, 0.12);
 
     /* Typografie */
     --schrift-text:       'Lato', 'Helvetica Neue', Arial, sans-serif;
@@ -364,9 +365,10 @@ h3 { font-size: var(--schrift-groesse-h3); }
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        135deg,
-        rgba(58, 106, 140, 0.80) 0%,
-        rgba(74, 127, 165, 0.65) 100%
+        to right,
+        rgba(35, 16, 5, 0.82) 0%,
+        rgba(35, 16, 5, 0.55) 55%,
+        rgba(35, 16, 5, 0.15) 100%
     );
 }
 
@@ -385,8 +387,9 @@ h3 { font-size: var(--schrift-groesse-h3); }
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.9);
     margin-bottom: var(--abstand-xs);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .hero-titel {
@@ -394,16 +397,18 @@ h3 { font-size: var(--schrift-groesse-h3); }
     color: var(--farbe-weiss);
     line-height: 1.25;
     margin-bottom: var(--abstand-s);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.55);
 }
 .hero-titel .akzent {
-    color: #FFE5A0; /* Warmes Gelb-Beige als Akzent im Hero */
+    color: #FBB991; /* Lachs – Logo-Herzton, hebt sich auf dunklem Overlay ab */
 }
 
 .hero-slogan {
     font-size: 1.1rem;
-    color: rgba(255,255,255,0.92);
+    color: rgba(255,255,255,0.95);
     margin-bottom: var(--abstand-m);
     line-height: 1.6;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.5);
 }
 
 .hero-buttons {
@@ -419,7 +424,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
     color: rgba(255,255,255,0.85);
 }
 .hero-telefon a {
-    color: #FFE5A0;
+    color: #FBB991; /* Lachs – gut lesbar auf dunklem Hero-Overlay */
     font-size: 1.05rem;
 }
 .hero-telefon a:hover {
@@ -635,7 +640,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
 
 /* ===== FOOTER ===== */
 .site-footer {
-    background-color: #2A3F52; /* Dunkles Blaugrau */
+    background-color: #2C1A0A; /* Sehr dunkles Warmbraun – edel und ruhig */
     color: rgba(255,255,255,0.85);
     padding-top: var(--abstand-xl);
 }
@@ -643,7 +648,18 @@ h3 { font-size: var(--schrift-groesse-h3); }
 .footer-inner {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--abstand-l);
+}
+
+/* Mobile: Spalten zentriert */
+.footer-spalte {
+    text-align: center;
+    width: 100%;
+}
+
+.footer-logo-link {
+    display: block; /* Logo mittig via text-align */
 }
 
 .footer-ueberschrift {
@@ -655,7 +671,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
 
 .footer-tagline {
     font-size: 0.95rem;
-    color: #FFE5A0;
+    color: #FBB991; /* Lachs – gut lesbar auf dunklem Footer */
     margin-bottom: var(--abstand-xs);
     font-style: italic;
 }
@@ -673,7 +689,31 @@ h3 { font-size: var(--schrift-groesse-h3); }
     font-size: 0.88rem !important;
 }
 
+/* Footer-Logo */
+.footer-logo-link {
+    display: inline-block;
+    margin-bottom: var(--abstand-s);
+    cursor: pointer;
+}
+.footer-logo {
+    height: 64px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1) drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+    transition: opacity var(--uebergang), transform var(--uebergang);
+}
+.footer-logo-link:hover .footer-logo {
+    opacity: 0.8;
+    transform: scale(1.04);
+}
+
 /* Footer-Navigation */
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
 .footer-nav li {
     margin-bottom: 0.5rem;
 }
@@ -692,7 +732,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
     font-style: normal;
 }
 .footer-telefon {
-    color: #FFE5A0;
+    color: #FBB991; /* Lachs – gut lesbar auf dunklem Footer */
     font-size: 1.1rem;
     font-weight: 700;
     text-decoration: none;
@@ -765,7 +805,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
     margin-bottom: 0.5rem;
 }
 .seiten-hero-titel {
-    color: var(--farbe-weiss);
+    color: #FBB991;
     font-size: var(--schrift-groesse-h1);
     margin-bottom: var(--abstand-xs);
 }
@@ -853,7 +893,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
 
 /* Hinweis: Keine Pflege */
 .hinweis-keine-pflege {
-    background-color: #EBF3FB;
+    background-color: #FBF2E8;
     border-left: 4px solid var(--farbe-primaer);
     padding: var(--abstand-m);
 }
@@ -1121,7 +1161,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
     display: block;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #FFE5A0;
+    color: var(--farbe-primaer);
     text-decoration: none;
     margin: 0.4rem 0;
 }

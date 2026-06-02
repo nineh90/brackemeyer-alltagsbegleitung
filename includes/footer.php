@@ -11,6 +11,12 @@
 
         <!-- Footer-Spalte 1: Über mich Kurzversion -->
         <div class="footer-spalte">
+            <!-- Logo verlinkt zur Startseite -->
+            <a href="/index.php" class="footer-logo-link" aria-label="Zur Startseite">
+                <img src="/images/logo/brackemeyer_alltagsbegleitung_logo.png"
+                     alt="Andrea Brackemeyer – Alltagsbegleitung Logo"
+                     class="footer-logo">
+            </a>
             <h3 class="footer-ueberschrift">Andrea Brackemeyer</h3>
             <p class="footer-tagline">Alltag mit Herz</p>
             <p>Ich nehme mir Zeit für Sie –<br>mit Herz, Respekt und Verlässlichkeit.</p>
