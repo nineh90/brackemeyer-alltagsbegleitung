@@ -363,7 +363,28 @@ h3 { font-size: var(--schrift-groesse-h3); }
     height: 100%;
     object-fit: cover;
     object-position: center top;
+    animation: hero-bild-einblenden 1.6s ease-out forwards;
 }
+
+@keyframes hero-bild-einblenden {
+    from {
+        opacity: 0;
+        filter: blur(14px);
+        transform: scale(1.06);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-bild {
+        animation: none;
+    }
+}
+
 /* Abdunkeln des Hero-Bilds für Lesbarkeit des Textes */
 .hero-overlay {
     position: absolute;
@@ -402,6 +423,24 @@ h3 { font-size: var(--schrift-groesse-h3); }
     line-height: 1.25;
     margin-bottom: var(--abstand-s);
     text-shadow: 0 2px 8px rgba(0,0,0,0.55);
+    animation: hero-titel-einblenden 0.9s ease-out 0.4s both;
+}
+
+@keyframes hero-titel-einblenden {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-titel {
+        animation: none;
+    }
 }
 .hero-titel .akzent {
     color: #FBB991; /* Lachs – Logo-Herzton, hebt sich auf dunklem Overlay ab */
@@ -691,6 +730,13 @@ h3 { font-size: var(--schrift-groesse-h3); }
     color: rgba(255,255,255,0.7);
     letter-spacing: 0.05em;
     font-size: 0.88rem !important;
+}
+
+.footer-einzugsgebiet {
+    margin-top: var(--abstand-xs);
+    color: rgba(255,255,255,0.55);
+    font-size: 0.82rem !important;
+    line-height: 1.6;
 }
 
 /* Footer-Logo */

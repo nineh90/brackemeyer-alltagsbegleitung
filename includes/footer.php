@@ -23,6 +23,10 @@
             <p class="footer-kernwerte">
                 <strong>ZEIT. NÄHE. UNTERSTÜTZUNG.</strong>
             </p>
+            <p class="footer-einzugsgebiet">
+                Tätig im Raum Tecklenburg, Lengerich,<br>
+                Lienen, Ladbergen und dem nördlichen Münsterland.
+            </p>
         </div>
 
         <!-- Footer-Spalte 2: Schnellnavigation -->

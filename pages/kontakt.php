@@ -19,7 +19,7 @@ include '../includes/header.php';
             <h1 class="seiten-hero-titel">Kontakt</h1>
             <p class="seiten-hero-untertitel">
                 Haben Sie Fragen oder möchten Sie einen Termin vereinbaren?
-                Ich antworte so schnell wie möglich – versprochen.
+                Ich bin für Sie da – im Raum Tecklenburg, Lengerich und dem nördlichen Münsterland.
             </p>
         </div>
     </section>
@@ -61,10 +61,11 @@ include '../includes/header.php';
                 <!-- Persönliches Gespräch -->
                 <div class="kontakt-karte">
                     <div>
-                        <h3>Erstgespräch bei Ihnen</h3>
+                        <h3>Erstgespräch bei Ihnen zu Hause</h3>
                         <p>
                             Das erste Kennenlernen findet immer bei Ihnen zu Hause statt –
-                            in Ihrer gewohnten Umgebung, ganz unverbindlich und kostenlos.
+                            in Tecklenburg, Lengerich, Lienen, Ladbergen
+                            und der gesamten Umgebung. Ganz unverbindlich und kostenlos.
                         </p>
                     </div>
                 </div>

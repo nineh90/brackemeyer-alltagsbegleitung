@@ -240,6 +240,57 @@
 }
 
 
+/* ===== MOBILE: Hero-Anpassungen (nur < 600px) ===== */
+@media (max-width: 599px) {
+
+    /* Weniger vertikaler Atem */
+    .hero-inhalt {
+        padding-top: var(--abstand-l);
+        padding-bottom: var(--abstand-l);
+    }
+
+    /* Vortitel: kleiner + weniger Letter-Spacing damit er auf einer Zeile bleibt */
+    .hero-vortitel {
+        font-size: 0.72rem;
+        letter-spacing: 0.05em;
+    }
+
+    /* H1: etwas kompakter */
+    .hero-titel {
+        font-size: 1.7rem;
+    }
+
+    /* Slogan: eine Stufe kleiner */
+    .hero-slogan {
+        font-size: 1rem;
+        margin-bottom: var(--abstand-s);
+    }
+
+    /* Buttons: zentriert, angenehme Maximalbreite */
+    .hero-buttons {
+        align-items: center;
+        align-self: stretch;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    /* Telefon-Zeile zentriert */
+    .hero-telefon {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Hero-Buttons auf Mobile etwas kompakter */
+    .hero-buttons .btn-gross {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+
 /* ===== BREIT: ab 1100px ===== */
 @media (min-width: 1100px) {
 

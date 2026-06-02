@@ -50,10 +50,10 @@ include '../includes/header.php';
                 </h2>
 
                 <p>
-                    Ich bin Andrea Brackemeyer – ein echtes Dorfkind, aufgewachsen in der Region,
+                    Ich bin Andrea Brackemeyer – ein echtes Dorfkind, aufgewachsen im Raum Tecklenburg,
                     verwurzelt mit den Menschen und den Wegen hier vor Ort. Genau das macht meine
-                    Arbeit so besonders: Ich kenne nicht nur die Gegend, ich kenne auch die kleinen
-                    Dinge, die das Leben angenehmer machen.
+                    Arbeit so besonders: Ich kenne nicht nur die Gegend zwischen Tecklenburg, Lengerich
+                    und dem nördlichen Münsterland, ich kenne auch die kleinen Dinge, die das Leben angenehmer machen.
                 </p>
                 <p>
                     Nach über <strong>20 Jahren Berufserfahrung</strong> in der Seniorenbetreuung habe ich
@@ -82,7 +82,7 @@ include '../includes/header.php';
                     </li>
                     <li>
                         <span class="check-icon" aria-hidden="true">✓</span>
-                        <span>Tiefe <strong>Ortskenntnis</strong> und gewachsenes Netzwerk</span>
+                        <span>Tiefe <strong>Ortskenntnis</strong> im Raum Tecklenburg und gewachsenes Netzwerk vor Ort</span>
                     </li>
                 </ul>
             </div>
@@ -107,8 +107,8 @@ include '../includes/header.php';
                 <div class="ansatz-karte">
                     <h3>Erstes Kennenlernen</h3>
                     <p>
-                        Am Anfang steht immer ein persönliches Gespräch – bei Ihnen zu Hause,
-                        ganz unverbindlich. Ich möchte verstehen, was Sie beschäftigt,
+                        Am Anfang steht immer ein persönliches Gespräch – bei Ihnen zu Hause
+                        im Raum Tecklenburg, ganz unverbindlich. Ich möchte verstehen, was Sie beschäftigt,
                         was Ihnen wichtig ist und wie ich helfen kann.
                     </p>
                 </div>
@@ -158,7 +158,8 @@ include '../includes/header.php';
         <div class="container kontakt-cta-inner">
             <h2 id="about-cta-titel">Möchten Sie mich persönlich kennenlernen?</h2>
             <p>
-                Ich freue mich auf ein unverbindliches Erstgespräch bei Ihnen zu Hause.
+                Ich freue mich auf ein unverbindliches Erstgespräch bei Ihnen zu Hause –
+                in Tecklenburg, Lengerich und dem gesamten nördlichen Münsterland.
             </p>
             <div class="cta-buttons">
                 <a href="tel:015161657136" class="btn btn-primaer btn-gross">
