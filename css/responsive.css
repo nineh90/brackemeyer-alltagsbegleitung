@@ -24,16 +24,9 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Kernwerte: 3 nebeneinander */
+    /* Kernwerte-Streifen: auf Tablet größerer Abstand zwischen den Items */
     .kernwerte-inner {
-        flex-direction: row;
-        justify-content: center;
-        align-items: stretch;
-        gap: var(--abstand-m);
-    }
-    .kernwert {
-        flex: 1;
-        max-width: 260px;
+        gap: var(--abstand-s) var(--abstand-xl);
     }
 
     /* Hero-Buttons nebeneinander */

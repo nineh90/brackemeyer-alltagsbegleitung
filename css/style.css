@@ -231,6 +231,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
     gap: var(--abstand-s);
     padding-top: 0.85rem;
     padding-bottom: 0.85rem;
+    transition: padding 0.3s ease;
 }
 
 /* Logo */
@@ -254,6 +255,10 @@ h3 { font-size: var(--schrift-groesse-h3); }
 .site-header.ist-gescrollt .site-logo-bild {
     transform: scale(0.72);   /* entspricht ~52px optisch */
     filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.08));
+}
+.site-header.ist-gescrollt .header-inner {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
 }
 
 /* Telefon im Header */
@@ -363,7 +368,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
     height: 100%;
     object-fit: cover;
     object-position: center top;
-    animation: hero-bild-einblenden 1.6s ease-out forwards;
+    animation: hero-bild-einblenden 1.1s ease-out forwards;
 }
 
 @keyframes hero-bild-einblenden {
@@ -531,53 +536,50 @@ h3 { font-size: var(--schrift-groesse-h3); }
 
 /* ===== KERNWERTE-STREIFEN ===== */
 .kernwerte-streifen {
-    background-color: var(--farbe-primaer);
-    padding: var(--abstand-l) 0;
-    overflow: hidden;
+    background-color: var(--farbe-akzent);
+    border-top: 1px solid var(--farbe-akzent-dunkel);
+    border-bottom: 1px solid var(--farbe-akzent-dunkel);
+    padding: var(--abstand-m) 0;
 }
 
 .kernwerte-inner {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--abstand-s);
-    text-align: center;
-}
-
-/* Card-Stil */
-.kernwert {
-    background-color: var(--farbe-weiss);
-    border-radius: var(--radius-mittel);
-    padding: var(--abstand-m) var(--abstand-l);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.13);
-    width: 100%;
-    max-width: 320px;
-    transition: transform var(--uebergang), box-shadow var(--uebergang);
-}
-.kernwert:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-}
-
-/* Icon-Kreis */
-.kernwert-icon-wrapper {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: var(--farbe-akzent);
-    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 0 auto var(--abstand-xs);
+    gap: var(--abstand-s) var(--abstand-l);
+}
+
+/* Ein Wert: Icon + Text inline nebeneinander */
+.kernwert {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.kernwert-icon-wrapper {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
     color: var(--farbe-primaer);
 }
 
 .kernwert-titel {
     font-family: var(--schrift-ueberschrift);
-    font-size: 1.15rem;
-    letter-spacing: 0.05em;
-    margin-bottom: 0;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
     color: var(--farbe-primaer-dunkel);
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* Herz-Trenner zwischen den Werten */
+.kernwert-trenner {
+    color: #FBB991;
+    font-size: 2.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+    transform: translateY(-0.12em);
 }
 
 

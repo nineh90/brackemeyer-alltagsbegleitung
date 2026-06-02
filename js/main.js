@@ -30,7 +30,7 @@ function titelTippen(element, segmente, verzoegerung, onFertig) {
                 cursor.textContent = '♥';
                 cursor.classList.add('tipp-cursor--fertig');
                 if (onFertig) onFertig();
-            }, 350);
+            }, 220);
             return;
         }
 
@@ -61,7 +61,7 @@ function titelTippen(element, segmente, verzoegerung, onFertig) {
         charIdx++;
         if (charIdx >= seg.text.length) { segIdx++; charIdx = 0; }
 
-        setTimeout(tippe, 72);
+        setTimeout(tippe, 55);
     }
 
     setTimeout(tippe, verzoegerung);
@@ -73,13 +73,13 @@ if (heroTitel) {
     titelTippen(heroTitel, [
         { text: 'Andrea – ', klass: null },
         { text: 'Alltag mit', klass: 'akzent' }
-    ], 750, function () {
+    ], 450, function () {
         // Vortitel einblenden sobald das Herz steht (Herz-Animation: 0.4s)
         var vortitel = document.querySelector('.hero-vortitel');
         if (vortitel) {
             setTimeout(function () {
                 vortitel.classList.add('hero-vortitel--sichtbar');
-            }, 500); // leicht nach dem Herz-Pop
+            }, 320); // leicht nach dem Herz-Pop
         }
     });
 }
