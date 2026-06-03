@@ -96,9 +96,14 @@
 /* ===== DESKTOP: ab 900px ===== */
 @media (min-width: 900px) {
 
-    /* Dekoratives Herz in der Hero einblenden */
+    /* Hero-Herz: auf Desktop einblenden */
     .hero-herz-deko {
         display: block;
+    }
+
+    /* Header-Herz: auf Desktop ausblenden (Hero übernimmt) */
+    .header-herz-deko {
+        display: none;
     }
 
     :root {

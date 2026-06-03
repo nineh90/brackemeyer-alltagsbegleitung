@@ -44,7 +44,7 @@ include '../includes/header.php';
 
             <div class="leistung-bild-wrapper">
                 <img
-                    src="/images/brackemeyer_alltagsbegleitung_gesellschaft.png"
+                    src="<?= $base ?>/images/brackemeyer_alltagsbegleitung_gesellschaft.png"
                     alt="Betreuerin und Seniorin schauen gemeinsam Fotoalbum an und unterhalten sich beim Kaffee"
                     class="leistung-bild"
                     width="520"
@@ -101,7 +101,7 @@ include '../includes/header.php';
 
             <div class="leistung-bild-wrapper">
                 <img
-                    src="/images/brackemeyer_alltagsbegleitung_aktiv_bleiben.png"
+                    src="<?= $base ?>/images/brackemeyer_alltagsbegleitung_aktiv_bleiben.png"
                     alt="Collage: Seniorin beim Spielen, Malen, Kartenspielen, Musizieren, Handarbeiten und Spazierengehen"
                     class="leistung-bild"
                     width="520"
@@ -120,7 +120,7 @@ include '../includes/header.php';
 
             <div class="leistung-bild-wrapper">
                 <img
-                    src="/images/brackemeyer_alltagsbegleitung_senioren_begleitung.png"
+                    src="<?= $base ?>/images/brackemeyer_alltagsbegleitung_senioren_begleitung.png"
                     alt="Collage: Begleitung zu Arztpraxis, Apotheke, Kirche, Friedhof, Wochenmarkt, Bürgeramt und Supermarkt"
                     class="leistung-bild"
                     width="520"
@@ -177,7 +177,7 @@ include '../includes/header.php';
 
             <div class="leistung-bild-wrapper">
                 <img
-                    src="/images/brackemeyer_alltagsbegleitung_unterstuetzung.png"
+                    src="<?= $base ?>/images/brackemeyer_alltagsbegleitung_unterstuetzung.png"
                     alt="Betreuerin hilft Seniorin beim Smartphone und erklärt ihr Briefe und Dokumente"
                     class="leistung-bild"
                     width="520"
@@ -200,7 +200,7 @@ include '../includes/header.php';
                     mit der Pflegekasse abgerechnet werden. Mehr dazu auf der Seite Abrechnung & Kosten.
                 </p>
                 <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
-                    <a href="/pages/abrechnung.php" class="btn btn-outline">Zur Abrechnung & Kosten</a>
+                    <a href="<?= $base ?>/pages/abrechnung.php" class="btn btn-outline">Zur Abrechnung & Kosten</a>
                     <a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener" class="btn btn-primaer">Jetzt anfragen</a>
                 </div>
             </div>

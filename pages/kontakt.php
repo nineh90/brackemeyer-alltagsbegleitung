@@ -74,7 +74,7 @@ include '../includes/header.php';
                 <div class="kontakt-datenschutz-hinweis">
                     Ihre Daten werden vertraulich behandelt und nur zur Beantwortung
                     Ihrer Anfrage verwendet.
-                    <a href="/pages/datenschutz.php">Datenschutzhinweis</a>
+                    <a href="<?= $base ?>/pages/datenschutz.php">Datenschutzhinweis</a>
                 </div>
 
             </div>
@@ -206,7 +206,7 @@ include '../includes/header.php';
                             >
                             <span class="checkbox-text">
                                 Ich habe die
-                                <a href="/pages/datenschutz.php" target="_blank">Datenschutzerklärung</a>
+                                <a href="<?= $base ?>/pages/datenschutz.php" target="_blank">Datenschutzerklärung</a>
                                 gelesen und bin damit einverstanden, dass meine Daten zur
                                 Beantwortung meiner Anfrage verwendet werden.
                                 <span class="pflichtfeld" aria-label="Pflichtfeld">*</span>

@@ -6,6 +6,9 @@
 
 // Aktuelle Seite ermitteln für aktive Navigation
 $aktuelle_seite = basename($_SERVER['PHP_SELF']);
+
+// Basispfad: lokal leer, auf Strato mit Unterordner-Pfad
+$base = (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] === 'localhost') ? '' : '/demo/brackemeyer_alltagsbegleitung';
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -33,10 +36,10 @@ $aktuelle_seite = basename($_SERVER['PHP_SELF']);
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Eigene Stylesheets -->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="<?= $base ?>/css/style.css">
+    <link rel="stylesheet" href="<?= $base ?>/css/responsive.css">
 
-    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="icon" type="image/png" href="<?= $base ?>/images/favicon.png">
 </head>
 <body>
 
@@ -45,9 +48,9 @@ $aktuelle_seite = basename($_SERVER['PHP_SELF']);
     <div class="container header-inner">
 
         <!-- Logo -->
-        <a href="/index.php" class="site-logo" aria-label="Andrea Brackemeyer – Startseite">
+        <a href="<?= $base ?>/index.php" class="site-logo" aria-label="Andrea Brackemeyer – Startseite">
             <img
-                src="/images/logo/brackemeyer_alltagsbegleitung_logo.png"
+                src="<?= $base ?>/images/logo/brackemeyer_alltagsbegleitung_logo.png"
                 alt="Andrea Brackemeyer – Alltagsbegleitung"
                 class="site-logo-bild"
                 width="220"
@@ -67,26 +70,35 @@ $aktuelle_seite = basename($_SERVER['PHP_SELF']);
             <span class="hamburger-linie"></span>
         </button>
 
+        <?php if ($aktuelle_seite === 'index.php'): ?>
+        <!-- Dekoratives Herz – nur Startseite, nur Mobile/Tablet -->
+        <div class="header-herz-deko" aria-hidden="true">
+            <svg viewBox="0 0 200 185" xmlns="http://www.w3.org/2000/svg">
+                <path class="header-herz-pfad" d="M100,170 C55,138 8,105 8,62 C8,28 30,8 58,8 C74,8 88,18 100,34 C112,18 126,8 142,8 C170,8 192,28 192,62 C192,105 145,138 100,170 Z"/>
+            </svg>
+        </div>
+        <?php endif; ?>
+
         <!-- Hauptnavigation -->
         <nav class="hauptnavigation" id="hauptnavigation" aria-label="Hauptnavigation">
             <ul class="nav-liste">
                 <li>
-                    <a href="/index.php" <?php echo ($aktuelle_seite === 'index.php') ? 'class="aktiv" aria-current="page"' : ''; ?>>
+                    <a href="<?= $base ?>/index.php" <?php echo ($aktuelle_seite === 'index.php') ? 'class="aktiv" aria-current="page"' : ''; ?>>
                         Startseite
                     </a>
                 </li>
                 <li>
-                    <a href="/pages/about.php" <?php echo ($aktuelle_seite === 'about.php') ? 'class="aktiv" aria-current="page"' : ''; ?>>
+                    <a href="<?= $base ?>/pages/about.php" <?php echo ($aktuelle_seite === 'about.php') ? 'class="aktiv" aria-current="page"' : ''; ?>>
                         Über mich
                     </a>
                 </li>
                 <li>
-                    <a href="/pages/leistungen.php" <?php echo ($aktuelle_seite === 'leistungen.php') ? 'class="aktiv" aria-current="page"' : ''; ?>>
+                    <a href="<?= $base ?>/pages/leistungen.php" <?php echo ($aktuelle_seite === 'leistungen.php') ? 'class="aktiv" aria-current="page"' : ''; ?>>
                         Leistungen
                     </a>
                 </li>
                 <li>
-                    <a href="/pages/abrechnung.php" <?php echo ($aktuelle_seite === 'abrechnung.php') ? 'class="aktiv" aria-current="page"' : ''; ?>>
+                    <a href="<?= $base ?>/pages/abrechnung.php" <?php echo ($aktuelle_seite === 'abrechnung.php') ? 'class="aktiv" aria-current="page"' : ''; ?>>
                         Abrechnung & Kosten
                     </a>
                 </li>

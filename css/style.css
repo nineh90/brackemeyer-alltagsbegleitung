@@ -391,7 +391,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
 }
 
 /* Abdunkeln des Hero-Bilds für Lesbarkeit des Textes */
-/* Dekoratives Herz – nur Desktop */
+/* Dekoratives Herz im Hero – nur Desktop */
 .hero-herz-deko {
     display: none;
     position: absolute;
@@ -402,6 +402,33 @@ h3 { font-size: var(--schrift-groesse-h3); }
     height: 280px;
     pointer-events: none;
     z-index: 2;
+}
+
+/* Dekoratives Herz im Header – nur Mobile/Tablet, vollständig zentriert */
+.header-herz-deko {
+    display: block;
+    position: absolute;
+    left: 50%;
+    right: auto;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 74px;
+    height: 68px;
+    pointer-events: none;
+    z-index: 0;
+}
+.header-herz-pfad {
+    fill: none;
+    stroke: rgba(251, 185, 145, 0.75);  /* Lachs – passt zum Logo-Farbton */
+    stroke-width: 4.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 900;
+    stroke-dashoffset: 900;
+    animation: herz-zeichnen 2.2s ease-out 0.6s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+    .header-herz-pfad { animation: none; stroke-dashoffset: 0; }
 }
 .hero-herz-pfad {
     fill: none;

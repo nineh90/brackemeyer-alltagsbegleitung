@@ -12,8 +12,8 @@
         <!-- Footer-Spalte 1: Über mich Kurzversion -->
         <div class="footer-spalte">
             <!-- Logo verlinkt zur Startseite -->
-            <a href="/index.php" class="footer-logo-link" aria-label="Zur Startseite">
-                <img src="/images/logo/brackemeyer_alltagsbegleitung_logo.png"
+            <a href="<?= $base ?>/index.php" class="footer-logo-link" aria-label="Zur Startseite">
+                <img src="<?= $base ?>/images/logo/brackemeyer_alltagsbegleitung_logo.png"
                      alt="Andrea Brackemeyer – Alltagsbegleitung Logo"
                      class="footer-logo">
             </a>
@@ -33,10 +33,10 @@
         <div class="footer-spalte">
             <h3 class="footer-ueberschrift">Navigation</h3>
             <ul class="footer-nav">
-                <li><a href="/index.php">Startseite</a></li>
-                <li><a href="/pages/about.php">Über mich</a></li>
-                <li><a href="/pages/leistungen.php">Leistungen</a></li>
-                <li><a href="/pages/abrechnung.php">Abrechnung & Kosten</a></li>
+                <li><a href="<?= $base ?>/index.php">Startseite</a></li>
+                <li><a href="<?= $base ?>/pages/about.php">Über mich</a></li>
+                <li><a href="<?= $base ?>/pages/leistungen.php">Leistungen</a></li>
+                <li><a href="<?= $base ?>/pages/abrechnung.php">Abrechnung & Kosten</a></li>
                 <li><a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener">Kontakt</a></li>
             </ul>
         </div>
@@ -67,8 +67,8 @@
                 &copy; <?php echo date('Y'); ?> Andrea Brackemeyer – Alltagsbegleitung. Alle Rechte vorbehalten.
             </p>
             <nav class="footer-rechtliches" aria-label="Rechtliche Links">
-                <a href="/pages/impressum.php">Impressum</a>
-                <a href="/pages/datenschutz.php">Datenschutz</a>
+                <a href="<?= $base ?>/pages/impressum.php">Impressum</a>
+                <a href="<?= $base ?>/pages/datenschutz.php">Datenschutz</a>
             </nav>
             <p class="footer-credit">
                 Webdesign by <a href="https://www.nils-digital.de" target="_blank" rel="noopener">Nils-Digital</a>
@@ -79,7 +79,7 @@
 <!-- ===== ENDE FOOTER ===== -->
 
 <!-- JavaScript einbinden (am Ende für schnelleres Laden) -->
-<script src="/js/main.js"></script>
+<script src="<?= $base ?>/js/main.js"></script>
 
 </body>
 </html>

@@ -21,7 +21,7 @@ include 'includes/header.php';
         <div class="hero-bild-wrapper">
             <!-- TODO [PLATZHALTER]: Hero-Bild durch echtes Foto von Andrea (mit Seniorin) ersetzen → /images/hero.jpg o.ä. -->
             <img
-                src="/images/alltagsbegleitung_brackemeyer_bsp.png"
+                src="<?= $base ?>/images/alltagsbegleitung_brackemeyer_bsp.png"
                 alt="Freundliche Alltagsbegleiterin mit Seniorin im Gespräch"
                 class="hero-bild"
                 width="1400"
@@ -45,7 +45,7 @@ include 'includes/header.php';
                     <a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener" class="btn btn-primaer btn-gross">
                         Jetzt Kontakt aufnehmen
                     </a>
-                    <a href="/pages/leistungen.php" class="btn btn-sekundaer btn-gross">
+                    <a href="<?= $base ?>/pages/leistungen.php" class="btn btn-sekundaer btn-gross">
                         Meine Leistungen
                     </a>
                 </div>
@@ -135,7 +135,7 @@ include 'includes/header.php';
                         Gespräche führen, zuhören, vorlesen und gemeinsame Aktivitäten erleben –
                         weil Einsamkeit nicht sein muss.
                     </p>
-                    <a href="/pages/leistungen.php#gesellschaft" class="karte-link">Mehr erfahren →</a>
+                    <a href="<?= $base ?>/pages/leistungen.php#gesellschaft" class="karte-link">Mehr erfahren →</a>
                 </article>
 
                 <!-- Karte 2: Aktiv Bleiben -->
@@ -145,7 +145,7 @@ include 'includes/header.php';
                         Spiele, Gedächtnistraining, kreative Tätigkeiten, Musik und
                         gemeinsame Spaziergänge für Körper und Geist.
                     </p>
-                    <a href="/pages/leistungen.php#aktiv" class="karte-link">Mehr erfahren →</a>
+                    <a href="<?= $base ?>/pages/leistungen.php#aktiv" class="karte-link">Mehr erfahren →</a>
                 </article>
 
                 <!-- Karte 3: Begleitung -->
@@ -155,7 +155,7 @@ include 'includes/header.php';
                         Ich begleite Sie zum Arzt, zur Apotheke, zum Friedhof, in die Kirche,
                         zum Einkaufen und zu Behörden.
                     </p>
-                    <a href="/pages/leistungen.php#begleitung" class="karte-link">Mehr erfahren →</a>
+                    <a href="<?= $base ?>/pages/leistungen.php#begleitung" class="karte-link">Mehr erfahren →</a>
                 </article>
 
                 <!-- Karte 4: Unterstützung im Alltag -->
@@ -165,13 +165,13 @@ include 'includes/header.php';
                         Flexible Hilfe im Alltag – individuell abgestimmt und
                         persönlich vor Ort besprochen.
                     </p>
-                    <a href="/pages/leistungen.php#alltag" class="karte-link">Mehr erfahren →</a>
+                    <a href="<?= $base ?>/pages/leistungen.php#alltag" class="karte-link">Mehr erfahren →</a>
                 </article>
 
             </div>
 
             <div class="leistungen-cta">
-                <a href="/pages/leistungen.php" class="btn btn-primaer">Alle Leistungen im Überblick</a>
+                <a href="<?= $base ?>/pages/leistungen.php" class="btn btn-primaer">Alle Leistungen im Überblick</a>
             </div>
 
         </div>
@@ -237,7 +237,7 @@ include 'includes/header.php';
                     </li>
                 </ul>
 
-                <a href="/pages/about.php" class="btn btn-primaer">Mehr über mich</a>
+                <a href="<?= $base ?>/pages/about.php" class="btn btn-primaer">Mehr über mich</a>
             </div>
 
         </div>
@@ -256,7 +256,7 @@ include 'includes/header.php';
                     mit der Pflegekasse abgerechnet werden – bis zu <strong>125 € monatlich</strong>
                     übernimmt die Kasse. Auch Selbstzahler sind herzlich willkommen.
                 </p>
-                <a href="/pages/abrechnung.php" class="btn btn-outline">Zur Abrechnung & Kosten</a>
+                <a href="<?= $base ?>/pages/abrechnung.php" class="btn btn-outline">Zur Abrechnung & Kosten</a>
             </div>
         </div>
     </section>

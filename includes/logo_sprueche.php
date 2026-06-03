@@ -12,7 +12,7 @@
         <!-- Logo von Andrea -->
         <div class="logo-sprueche-logo-wrapper">
             <img
-                src="/images/logo/brackemeyer_alltagsbegleitung_logo.png"
+                src="<?= $base ?>/images/logo/brackemeyer_alltagsbegleitung_logo.png"
                 alt="Andrea Brackemeyer – Alltagsbegleitung mit Herz"
                 class="logo-sprueche-logo"
                 width="320"
