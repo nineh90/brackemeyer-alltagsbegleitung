@@ -18,7 +18,8 @@ $aktuelle_seite = basename($_SERVER['PHP_SELF']);
     <meta name="description" content="<?php echo isset($seiten_beschreibung) ? htmlspecialchars($seiten_beschreibung) : 'Andrea Brackemeyer – Alltagsbegleitung für Senioren mit Herz, Respekt und Verlässlichkeit. Über 20 Jahre Erfahrung. Jetzt Kontakt aufnehmen.'; ?>">
 
     <!-- Suchmaschinen-Angaben -->
-    <meta name="robots" content="index, follow">
+    <!-- TODO [SEO-CHECK vor Deploy]: noindex entfernen → "index, follow" setzen -->
+    <meta name="robots" content="noindex, nofollow">
     <meta name="author" content="Andrea Brackemeyer">
 
     <!-- Open Graph für Social Media -->
@@ -35,7 +36,6 @@ $aktuelle_seite = basename($_SERVER['PHP_SELF']);
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/responsive.css">
 
-    <!-- Favicon Platzhalter -->
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
@@ -91,7 +91,7 @@ $aktuelle_seite = basename($_SERVER['PHP_SELF']);
                     </a>
                 </li>
                 <li>
-                    <a href="/pages/kontakt.php" class="nav-cta <?php echo ($aktuelle_seite === 'kontakt.php') ? 'aktiv' : ''; ?>" <?php echo ($aktuelle_seite === 'kontakt.php') ? 'aria-current="page"' : ''; ?>>
+                    <a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener" class="nav-cta <?php echo ($aktuelle_seite === 'kontakt.php') ? 'aktiv' : ''; ?>" <?php echo ($aktuelle_seite === 'kontakt.php') ? 'aria-current="page"' : ''; ?>>
                         Kontakt
                     </a>
                 </li>

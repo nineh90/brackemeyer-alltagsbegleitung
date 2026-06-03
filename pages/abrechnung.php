@@ -71,7 +71,7 @@ include '../includes/header.php';
                         <li>✓ Transparente Stundensätze</li>
                         <li>✓ Individuelle Vereinbarung</li>
                     </ul>
-                    <a href="/pages/kontakt.php" class="btn btn-primaer" style="margin-top:1.5rem;">
+                    <a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener" class="btn btn-primaer" style="margin-top:1.5rem;">
                         Angebot anfragen
                     </a>
                 </div>
@@ -230,7 +230,7 @@ include '../includes/header.php';
                 <a href="tel:015161657136" class="btn btn-primaer btn-gross">
                     0151 61 65 71 36
                 </a>
-                <a href="/pages/kontakt.php" class="btn btn-sekundaer btn-gross">
+                <a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener" class="btn btn-sekundaer btn-gross">
                     Nachricht schreiben
                 </a>
             </div>

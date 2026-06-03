@@ -27,7 +27,7 @@ include '../includes/header.php';
         <div class="container about-intro-inner">
 
             <div class="about-bild-wrapper">
-                <!-- Platzhalterbild – wird durch echtes Portrait ersetzt -->
+                <!-- TODO [PLATZHALTER]: Portraitfoto von Andrea ersetzen – aktuell: picsum.photos-Dummy → /images/andrea-portrait.jpg -->
                 <img
                     src="https://picsum.photos/seed/andrea-portrait2/480/580"
                     alt="Andrea Brackemeyer – Alltagsbegleiterin"
@@ -165,7 +165,7 @@ include '../includes/header.php';
                 <a href="tel:015161657136" class="btn btn-primaer btn-gross">
                     0151 61 65 71 36
                 </a>
-                <a href="/pages/kontakt.php" class="btn btn-sekundaer btn-gross">
+                <a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener" class="btn btn-sekundaer btn-gross">
                     Nachricht schreiben
                 </a>
             </div>

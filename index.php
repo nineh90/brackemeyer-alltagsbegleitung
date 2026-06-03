@@ -19,7 +19,7 @@ include 'includes/header.php';
     <!-- Großer Willkommensbereich mit Bild, Motto und Handlungsaufforderung -->
     <section class="hero" aria-label="Willkommen">
         <div class="hero-bild-wrapper">
-            <!-- Platzhalterbild – wird durch echtes Foto von Andrea ersetzt -->
+            <!-- TODO [PLATZHALTER]: Hero-Bild durch echtes Foto von Andrea (mit Seniorin) ersetzen → /images/hero.jpg o.ä. -->
             <img
                 src="/images/alltagsbegleitung_brackemeyer_bsp.png"
                 alt="Freundliche Alltagsbegleiterin mit Seniorin im Gespräch"
@@ -42,7 +42,7 @@ include 'includes/header.php';
                     mit Herz, Respekt und Verlässlichkeit.
                 </p>
                 <div class="hero-buttons">
-                    <a href="/pages/kontakt.php" class="btn btn-primaer btn-gross">
+                    <a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener" class="btn btn-primaer btn-gross">
                         Jetzt Kontakt aufnehmen
                     </a>
                     <a href="/pages/leistungen.php" class="btn btn-sekundaer btn-gross">
@@ -189,7 +189,7 @@ include 'includes/header.php';
     <section class="vertrauen" aria-labelledby="vertrauen-ueberschrift">
         <div class="container vertrauen-inner">
 
-            <!-- Foto von Andrea (Platzhalter) -->
+            <!-- TODO [PLATZHALTER]: Portraitfoto von Andrea ersetzen – aktuell: picsum.photos-Dummy → /images/andrea-portrait.jpg -->
             <div class="vertrauen-bild-wrapper">
                 <img
                     src="https://picsum.photos/seed/andrea-portrait2/500/600"
@@ -276,7 +276,7 @@ include 'includes/header.php';
                 <a href="tel:015161657136" class="btn btn-primaer btn-gross">
                     0151 61 65 71 36
                 </a>
-                <a href="/pages/kontakt.php" class="btn btn-sekundaer btn-gross">
+                <a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener" class="btn btn-sekundaer btn-gross">
                     Nachricht schreiben
                 </a>
             </div>

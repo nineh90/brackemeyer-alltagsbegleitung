@@ -86,7 +86,12 @@ include '../includes/header.php';
                     Nachricht schreiben
                 </h2>
 
-                <!-- TODO: action="#" durch echte Verarbeitungs-URL ersetzen -->
+                <!-- TODO [vor Deploy]: Formular-Backend einrichten (kein Formspree – eigene Lösung) und fieldset-disabled entfernen -->
+                <!-- Demo-Hinweis: Formular ist bis zum offiziellen Launch deaktiviert -->
+                <div class="formular-demo-hinweis" role="note" style="background:#FBF6F0; border-left:4px solid #7A4B28; padding:1rem 1.25rem; border-radius:0 6px 6px 0; margin-bottom:1.5rem; font-size:1rem;">
+                    <strong>Demo-Version</strong> – Das Formular wird vor dem offiziellen Launch aktiviert.<br>
+                    Rufen Sie mich gerne direkt an: <a href="tel:015161657136" style="color:#7A4B28; font-weight:700;">0151 61 65 71 36</a>
+                </div>
                 <form
                     class="kontakt-formular"
                     action="#"
@@ -104,7 +109,8 @@ include '../includes/header.php';
                     </div>
                     <?php endif; ?>
 
-                    <!-- Felder -->
+                    <!-- Felder (fieldset disabled = Demo-Sperre bis Launch) -->
+                    <fieldset disabled style="border:none; padding:0; margin:0; opacity:0.55;">
                     <div class="formular-gruppe">
                         <label for="name" class="formular-label">
                             Ihr Name <span class="pflichtfeld" aria-label="Pflichtfeld">*</span>
@@ -216,6 +222,7 @@ include '../includes/header.php';
                             <span class="pflichtfeld">*</span> Pflichtfelder
                         </p>
                     </div>
+                    </fieldset>
 
                 </form>
             </div>

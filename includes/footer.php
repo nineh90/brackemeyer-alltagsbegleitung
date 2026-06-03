@@ -37,7 +37,7 @@
                 <li><a href="/pages/about.php">Über mich</a></li>
                 <li><a href="/pages/leistungen.php">Leistungen</a></li>
                 <li><a href="/pages/abrechnung.php">Abrechnung & Kosten</a></li>
-                <li><a href="/pages/kontakt.php">Kontakt</a></li>
+                <li><a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener">Kontakt</a></li>
             </ul>
         </div>
 
@@ -51,7 +51,7 @@
                     </a>
                 </p>
                 <p>
-                    <a href="/pages/kontakt.php" class="btn btn-outline btn-klein">
+                    <a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener" class="btn btn-outline btn-klein">
                         Nachricht schreiben
                     </a>
                 </p>

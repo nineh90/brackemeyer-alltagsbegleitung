@@ -201,7 +201,7 @@ include '../includes/header.php';
                 </p>
                 <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
                     <a href="/pages/abrechnung.php" class="btn btn-outline">Zur Abrechnung & Kosten</a>
-                    <a href="/pages/kontakt.php" class="btn btn-primaer">Jetzt anfragen</a>
+                    <a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener" class="btn btn-primaer">Jetzt anfragen</a>
                 </div>
             </div>
         </div>
@@ -220,7 +220,7 @@ include '../includes/header.php';
                 <a href="tel:015161657136" class="btn btn-primaer btn-gross">
                     0151 61 65 71 36
                 </a>
-                <a href="/pages/kontakt.php" class="btn btn-sekundaer btn-gross">
+                <a href="https://nils-digital.de/pages/kontakt.html" target="_blank" rel="noopener" class="btn btn-sekundaer btn-gross">
                     Nachricht schreiben
                 </a>
             </div>
