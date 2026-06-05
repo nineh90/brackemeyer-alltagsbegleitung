@@ -70,14 +70,12 @@ $base = (isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME'] === 'localhos
             <span class="hamburger-linie"></span>
         </button>
 
-        <?php if ($aktuelle_seite === 'index.php'): ?>
-        <!-- Dekoratives Herz – nur Startseite, nur Mobile/Tablet -->
+        <!-- Dekoratives Herz – alle Seiten, nur Mobile/Tablet -->
         <div class="header-herz-deko" aria-hidden="true">
             <svg viewBox="0 0 200 185" xmlns="http://www.w3.org/2000/svg">
                 <path class="header-herz-pfad" d="M100,170 C55,138 8,105 8,62 C8,28 30,8 58,8 C74,8 88,18 100,34 C112,18 126,8 142,8 C170,8 192,28 192,62 C192,105 145,138 100,170 Z"/>
             </svg>
         </div>
-        <?php endif; ?>
 
         <!-- Hauptnavigation -->
         <nav class="hauptnavigation" id="hauptnavigation" aria-label="Hauptnavigation">

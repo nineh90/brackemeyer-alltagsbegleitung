@@ -50,20 +50,18 @@ include '../includes/header.php';
                 </h2>
 
                 <p>
-                    Ich bin Andrea Brackemeyer – ein echtes Dorfkind, aufgewachsen im Raum Tecklenburg,
-                    verwurzelt mit den Menschen und den Wegen hier vor Ort. Genau das macht meine
-                    Arbeit so besonders: Ich kenne nicht nur die Gegend zwischen Tecklenburg, Lengerich
-                    und dem nördlichen Münsterland, ich kenne auch die kleinen Dinge, die das Leben angenehmer machen.
+                    Ich bin Andrea Brackemeyer – aufgewachsen in der Region Tecklenburg,
+                    verwurzelt mit den Menschen hier vor Ort. Ich kenne die Gegend, die Wege
+                    und die kleinen Dinge, die das Leben angenehmer machen.
                 </p>
                 <p>
-                    Nach über <strong>20 Jahren Berufserfahrung</strong> in der Seniorenbetreuung habe ich
-                    eine klare Überzeugung: Was ältere Menschen wirklich brauchen, ist nicht nur Hilfe –
-                    sondern echte <strong>Zuwendung, Zeit und Verlässlichkeit</strong>.
+                    Nach über <strong>20 Jahren in der Seniorenbetreuung</strong> weiß ich:
+                    Was ältere Menschen wirklich brauchen, ist echte
+                    <strong>Zuwendung, Zeit und Verlässlichkeit</strong>.
                 </p>
                 <p>
-                    Deshalb habe ich mich als Alltagsbegleiterin selbstständig gemacht. So kann ich
-                    jedem Menschen genau so viel Zeit schenken, wie er oder sie wirklich braucht –
-                    ohne Hektik, ohne Eile.
+                    Deshalb bin ich als Alltagsbegleiterin selbstständig – damit ich jedem Menschen
+                    genau so viel Zeit geben kann, wie er wirklich braucht. Ohne Hektik, ohne Eile.
                 </p>
 
                 <!-- Qualifikationen als Vertrauenssignale -->
@@ -82,7 +80,7 @@ include '../includes/header.php';
                     </li>
                     <li>
                         <span class="check-icon" aria-hidden="true">✓</span>
-                        <span>Tiefe <strong>Ortskenntnis</strong> im Raum Tecklenburg und gewachsenes Netzwerk vor Ort</span>
+                        <span><strong>Ortskenntnis</strong> in der Region Tecklenburg und gewachsenes Netzwerk vor Ort</span>
                     </li>
                 </ul>
             </div>
@@ -107,9 +105,9 @@ include '../includes/header.php';
                 <div class="ansatz-karte">
                     <h3>Erstes Kennenlernen</h3>
                     <p>
-                        Am Anfang steht immer ein persönliches Gespräch – bei Ihnen zu Hause
-                        im Raum Tecklenburg, ganz unverbindlich. Ich möchte verstehen, was Sie beschäftigt,
-                        was Ihnen wichtig ist und wie ich helfen kann.
+                        Am Anfang steht ein persönliches Gespräch – bei Ihnen zu Hause,
+                        ganz unverbindlich. Ich möchte verstehen, was Sie beschäftigt
+                        und wie ich helfen kann.
                     </p>
                 </div>
 
@@ -159,7 +157,7 @@ include '../includes/header.php';
             <h2 id="about-cta-titel">Möchten Sie mich persönlich kennenlernen?</h2>
             <p>
                 Ich freue mich auf ein unverbindliches Erstgespräch bei Ihnen zu Hause –
-                in Tecklenburg, Lengerich und dem gesamten nördlichen Münsterland.
+                in der Region Tecklenburg und dem nördlichen Münsterland.
             </p>
             <div class="cta-buttons">
                 <a href="tel:015161657136" class="btn btn-primaer btn-gross">

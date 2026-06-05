@@ -242,19 +242,18 @@ h3 { font-size: var(--schrift-groesse-h3); }
     flex-shrink: 0;
 }
 .site-logo-bild {
-    height: 72px;
+    height: 96px;
     width: auto;
     display: block;
-    /* transform statt height – kein Layout-Reflow, kein Navbar-Springen */
-    transition: transform 0.3s ease, filter 0.3s ease;
-    transform-origin: left center;
-    transform: scale(1);
+    transition: height 0.3s ease, filter 0.3s ease;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.10));
-    will-change: transform;
 }
 .site-header.ist-gescrollt .site-logo-bild {
-    transform: scale(0.72);   /* entspricht ~52px optisch */
+    height: 60px;
     filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.08));
+}
+.site-header.ist-gescrollt .header-herz-deko {
+    transform: translateX(-50%) translateY(-50%) scale(0.72);
 }
 .site-header.ist-gescrollt .header-inner {
     padding-top: 0.4rem;
@@ -282,6 +281,7 @@ h3 { font-size: var(--schrift-groesse-h3); }
     flex-direction: column;
     gap: 5px;
     padding: 0.5rem;
+    margin-right: -0.5rem; /* visueller Rand = Container-Rand, wie Inhalte */
     background: none;
     border: none;
     cursor: pointer;
@@ -412,10 +412,11 @@ h3 { font-size: var(--schrift-groesse-h3); }
     right: auto;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 74px;
-    height: 68px;
+    width: 68px;
+    height: 63px;
     pointer-events: none;
     z-index: 0;
+    transition: transform 0.3s ease;
 }
 .header-herz-pfad {
     fill: none;

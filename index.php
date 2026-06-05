@@ -33,7 +33,7 @@ include 'includes/header.php';
 
         <div class="container hero-inhalt">
             <div class="hero-text">
-                <p class="hero-vortitel">Alltagsbegleitung im Raum Tecklenburg</p>
+                <p class="hero-vortitel">Alltagsbegleitung in der Region Tecklenburg</p>
                 <h1 class="hero-titel">
                     Andrea – <span class="akzent">Alltag mit Herz</span>
                 </h1>
@@ -208,9 +208,8 @@ include 'includes/header.php';
                     Verlässlichkeit aus Überzeugung
                 </h2>
                 <p class="vertrauen-intro">
-                    Ich bin Andrea Brackemeyer – ein echtes Dorfkind aus dem Raum Tecklenburg,
-                    das die Menschen und Wege hier kennt und liebt. Meine Arbeit ist nicht nur ein Beruf,
-                    sie ist meine Berufung.
+                    Ich bin Andrea Brackemeyer – aufgewachsen in der Region Tecklenburg,
+                    verwurzelt mit den Menschen hier vor Ort. Meine Arbeit ist meine Berufung.
                 </p>
 
                 <!-- Vertrauenssignale als Liste -->
@@ -233,7 +232,7 @@ include 'includes/header.php';
                     </li>
                     <li>
                         <span class="check-icon" aria-hidden="true">✓</span>
-                        <span>Ortskenntnis im <strong>Raum Tecklenburg und Münsterland</strong></span>
+                        <span>Ortskenntnis in der <strong>Region Tecklenburg und Münsterland</strong></span>
                     </li>
                 </ul>
 
@@ -269,8 +268,8 @@ include 'includes/header.php';
         <div class="container kontakt-cta-inner">
             <h2 id="kontakt-cta-titel">Lassen Sie uns ins Gespräch kommen</h2>
             <p>
-                Ich freue mich auf Ihren Anruf oder Ihre Nachricht.
-                Gemeinsam finden wir heraus, wie ich Ihnen im Raum Tecklenburg helfen kann.
+                Ich freue mich auf Ihren Anruf oder Ihre Nachricht –
+                und darauf, für Sie da zu sein.
             </p>
             <div class="cta-buttons">
                 <a href="tel:015161657136" class="btn btn-primaer btn-gross">

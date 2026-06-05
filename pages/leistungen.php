@@ -18,7 +18,7 @@ include '../includes/header.php';
             <h1 class="seiten-hero-titel">Meine Leistungen</h1>
             <p class="seiten-hero-untertitel">
                 Individuell, verlässlich und genau so, wie Sie es brauchen –
-                für Senioren im Raum Tecklenburg, Lengerich und dem nördlichen Münsterland.
+                für Senioren in der Region Tecklenburg und Münsterland.
             </p>
         </div>
     </section>
@@ -161,9 +161,8 @@ include '../includes/header.php';
                     Unterstützung im Alltag
                 </h2>
                 <p class="leistung-intro">
-                    Manchmal braucht man einfach jemanden, der hilft – flexibel,
-                    unkompliziert und ohne großen Aufwand.
-                    Was genau ich tun kann, besprechen wir persönlich bei Ihnen zu Hause im Raum Tecklenburg.
+                    Manchmal braucht man jemanden, der einfach hilft – flexibel und
+                    unkompliziert. Was ich konkret tun kann, besprechen wir persönlich bei Ihnen zu Hause.
                 </p>
                 <ul class="leistung-liste">
                     <li>Flexible Hilfe, individuell abgestimmt</li>
@@ -213,8 +212,8 @@ include '../includes/header.php';
         <div class="container kontakt-cta-inner">
             <h2 id="leistungen-cta-titel">Interesse? Rufen Sie mich einfach an.</h2>
             <p>
-                Ich beantworte gerne all Ihre Fragen und schaue gemeinsam mit Ihnen,
-                wie ich Ihnen im Raum Tecklenburg am besten helfen kann.
+                Ich beantworte gerne Ihre Fragen und schaue mit Ihnen,
+                wie ich am besten helfen kann.
             </p>
             <div class="cta-buttons">
                 <a href="tel:015161657136" class="btn btn-primaer btn-gross">

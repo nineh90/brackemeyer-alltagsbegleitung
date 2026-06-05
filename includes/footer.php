@@ -24,8 +24,8 @@
                 <strong>ZEIT. NÄHE. UNTERSTÜTZUNG.</strong>
             </p>
             <p class="footer-einzugsgebiet">
-                Tätig im Raum Tecklenburg, Lengerich,<br>
-                Lienen, Ladbergen und dem nördlichen Münsterland.
+                Tätig in der Region Tecklenburg –<br>
+                Lengerich, Lienen, Ladbergen und Münsterland.
             </p>
         </div>
 

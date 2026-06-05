@@ -154,9 +154,8 @@
     .site-logo-bild {
         height: 92px;
     }
-    /* scale statt height – Layout bleibt stabil, kein Springen */
     .site-header.ist-gescrollt .site-logo-bild {
-        transform: scale(0.67);   /* entspricht ~62px optisch */
+        height: 62px;
     }
 
     /* Vertrauen: Bild + Text nebeneinander */
