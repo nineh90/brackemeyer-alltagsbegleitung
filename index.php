@@ -21,8 +21,8 @@ include 'includes/header.php';
         <div class="hero-bild-wrapper">
             <!-- TODO [PLATZHALTER]: Hero-Bild durch echtes Foto von Andrea (mit Seniorin) ersetzen → /images/hero.jpg o.ä. -->
             <img
-                src="<?= $base ?>/images/alltagsbegleitung_brackemeyer_bsp.png"
-                alt="Freundliche Alltagsbegleiterin mit Seniorin im Gespräch"
+                src="<?= $base ?>/images/brackemeyer_alltagsbegleitung_unterstuetzung.png"
+                alt="Freundliche Alltagsbegleiterin hilft einer Seniorin am Tisch"
                 class="hero-bild"
                 width="1400"
                 height="600"
@@ -74,36 +74,18 @@ include 'includes/header.php';
             <div class="kernwerte-inner">
 
                 <div class="kernwert">
-                    <span class="kernwert-icon-wrapper" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                    </span>
                     <h2 class="kernwert-titel">ZEIT</h2>
                 </div>
 
                 <span class="kernwert-trenner" aria-hidden="true">♥</span>
 
                 <div class="kernwert">
-                    <span class="kernwert-icon-wrapper" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                    </span>
                     <h2 class="kernwert-titel">NÄHE</h2>
                 </div>
 
                 <span class="kernwert-trenner" aria-hidden="true">♥</span>
 
                 <div class="kernwert">
-                    <span class="kernwert-icon-wrapper" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <polyline points="9 12 11 14 15 10"/>
-                        </svg>
-                    </span>
                     <h2 class="kernwert-titel">UNTERSTÜTZUNG</h2>
                 </div>
 
