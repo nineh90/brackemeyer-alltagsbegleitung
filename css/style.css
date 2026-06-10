@@ -449,6 +449,37 @@ h3 { font-size: var(--schrift-groesse-h3); }
     .hero-herz-pfad { animation: none; stroke-dashoffset: 0; }
 }
 
+/* Deko-Herz: nach dem Zeichnen ein einziger, sanfter Herzschlag – danach Ruhe.
+   Der Beat läuft auf dem <svg> (Skalierung), das Zeichnen auf dem <path>
+   (stroke-dashoffset). So stören sich die beiden Transforms nicht und das
+   Timing lässt sich sauber per animation-delay an das Zeichen-Ende koppeln. */
+.hero-herz-deko svg,
+.header-herz-deko svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+}
+/* Hero: Zeichnen endet bei 0.5s + 2.2s = 2.7s → genau dann ein Beat */
+.hero-herz-deko svg {
+    animation: herz-deko-beat 0.7s ease-in-out 2.7s 1;
+}
+/* Header: Zeichnen endet bei 0.6s + 2.2s = 2.8s → genau dann ein Beat */
+.header-herz-deko svg {
+    animation: herz-deko-beat 0.7s ease-in-out 2.8s 1;
+}
+@keyframes herz-deko-beat {
+    0%   { transform: scale(1);    }
+    30%  { transform: scale(1.08); }
+    55%  { transform: scale(0.97); }
+    78%  { transform: scale(1.03); }
+    100% { transform: scale(1);    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-herz-deko svg,
+    .header-herz-deko svg { animation: none; }
+}
+
 .hero-overlay {
     position: absolute;
     inset: 0;

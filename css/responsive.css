@@ -294,13 +294,13 @@
 
     /* Herz-Trenner (ZEIT ♥ NÄHE ♥ UNTERSTÜTZUNG) auf Mobile verkleinern */
     .kernwert-trenner {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     /* Hero-Herz nach dem Tipp-Effekt auf Mobile verkleinern */
     .hero-titel .tipp-cursor--fertig {
-        font-size: 1.1em;
-        margin-left: 6px;
+        font-size: 0.95em;
+        margin-left: 4px;
     }
 }
 
