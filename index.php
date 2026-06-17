@@ -19,9 +19,8 @@ include 'includes/header.php';
     <!-- Großer Willkommensbereich mit Bild, Motto und Handlungsaufforderung -->
     <section class="hero" aria-label="Willkommen">
         <div class="hero-bild-wrapper">
-            <!-- TODO [PLATZHALTER]: Hero-Bild durch echtes Foto von Andrea (mit Seniorin) ersetzen → /images/hero.jpg o.ä. -->
             <img
-                src="<?= $base ?>/images/brackemeyer_alltagsbegleitung_unterstuetzung.png"
+                src="<?= $base ?>/images/alltagsbegleitung_brackemeyer_hero.avif"
                 alt="Freundliche Alltagsbegleiterin hilft einer Seniorin am Tisch"
                 class="hero-bild"
                 width="1400"
